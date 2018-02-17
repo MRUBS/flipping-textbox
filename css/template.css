@@ -1,0 +1,298 @@
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Template Stylesheet
+Project:    Vesto-Minimal Portfolio Template
+Author:     Syed Mehdi Hasan
+Author URI: http://hmehdi.com/
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++ Table of contents +++++++++	
+ 1. Page-loader
+ 2. Header
+	2.1 Sticky Header	
+ 3. Banner-section
+ 4. About-section
+ 5. Call-section
+ 6. Core Features
+ 7. Fun-fact Section
+ 8. Portfolio Section 
+ 9. Testimonial Section
+10. Skills Section
+11. Our-team Section
+12. Subscribe Section
+13. Contact-section
+14. footer
+15. Page-title-section
+16. Inner-content-section
+17. Portfolio-Contents
+18. Service-call-section
+19. Why Choose Us
+20. Gallery
+21. Clients-contents
+22. Faq
+23. 404 Error
+24. Under-construction-section
+25. Coming-soon
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* ==============================
+   Page-loader
+   ============================== */
+#page-loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999999;
+    display: block;
+    background: #fff;
+}
+.page-loader-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-top-color: rgba(0, 0, 0, 0.65);
+    border-bottom-color: rgba(0, 0, 0, 0.15);
+    border-left-color: rgba(0, 0, 0, 0.65);
+    border-right-color: rgba(0, 0, 0, 0.15);
+    -webkit-animation: page-loader-circle 0.8s linear infinite;
+	-moz-animation: page-loader-circle 0.8s linear infinite;
+	-ms-animation: page-loader-circle 0.8s linear infinite;
+	-o-animation: page-loader-circle 0.8s linear infinite;
+    animation: page-loader-circle 0.8s linear infinite;
+}
+@keyframes page-loader-circle {
+    from {
+        -webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes page-loader-circle {
+    from {
+        -webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+    }
+}
+
+
+
+.input-field {
+    float: left;
+    width: 40%;
+    position: relative;
+}
+.change-img {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(121, 116, 119, 0.77);
+    padding: 5px 6px;
+    border-radius: 10px;
+    position: absolute;
+    top: 23px;
+    right: 13px;
+}
+.tab-content {
+    float: left;
+    width: 100%;
+    padding: 0px 10%;
+    padding-top: 50px;
+}
+input.tab_text_input {
+    float: left;
+    width: 100%;
+    font-size: 12px;
+    padding: 7px 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #7C7B7B;
+    font-weight: 600;
+    background-image: url(../images/textbox-img.png);
+    background-repeat: no-repeat;
+    background-position: 3% center;
+}
+.input-field-big {
+    float: right;
+    width: 60%;
+    padding: 0px 5%;
+}
+input.tab_text_input_calender {
+    float: left;
+    width: 48%;
+    font-size: 12px;
+    padding: 7px 10px;
+    padding-left: 35px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #7C7B7B;
+    font-weight: 600;
+    background-image: url(../images/textbox-cal.png);
+    background-repeat: no-repeat;
+    background-position: 6% center;
+    margin-right: 6px;
+}
+select.persons{
+    float: left;
+    width: 98%;
+    font-size: 12px;
+    padding: 7px 10px;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #7C7B7B;
+    font-weight: 600;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    background: url(../images/select-border.png) no-repeat;
+    background-color: #ffffff;
+    background-position: 96% center;
+}
+label.checkbox-inline {
+    color: #ffffff !important;
+    font-size: 13px !important;
+}
+label.checkbox-inline.check-right {
+    margin-left: 20px;
+}
+input.form-submit-btn {
+    float: right;
+    padding: 6px 22px;
+    border-radius: 10px;
+    font-size: 13px;
+    background-color: #FFC655;
+    color: #ffffff;
+    font-weight: 600;
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+}
+input.form-submit-btn:hover {
+    background-color: #ffffff;
+    color: #6E6E6E;
+}
+.input-field-btn {
+    float: left;
+    width: 94%;
+    padding: 40px 0px 30px 0px;
+}
+.form-links {
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.form-links ul li {
+    display: inline-block;
+}
+.form-links ul li a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #ffc655;
+    color: #7C7B7B;
+}
+.form-links ul li a {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #ffc655;
+    color: #6E6E6E;
+    -webkit-transition:.3s;
+    -moz-transition:.3s;
+    -ms-transition:.3s;
+    -o-transition:.3s;
+    transition:.3s;
+}
+.form-links ul li a:hover {
+    background-color: #ffffff;
+}
+.form-links ul li.active a {
+    background-color: #ffffff;
+}
+.checkbox-inline.check-left {
+    padding-left: 0px;
+}
+.check-btns {
+    float: left;
+    margin-top: 7px;
+}
+select.tab_text_input {
+    float: left;
+    width: 48%;
+    font-size: 12px;
+    padding: 7px 10px;
+    padding-left: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: #7C7B7B;
+    font-weight: 600;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    -webkit-appearance: none;
+    background: url(../images/select-border.png) no-repeat;
+    background-color: #ffffff;
+    background-position: 96% center;
+    margin-right: 6px;
+}
+input.text_input {
+    width: 80px;
+    font-size: 12px;
+    padding: 7px 16px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: #7C7B7B;
+    font-weight: 600;
+}
+form {
+    width: 800px;
+    padding: 100px 50px;
+    margin: 200px auto;
+    background: rgb(88, 88, 88);
+    min-height: 600px;
+}
+.bottom-input-text {
+    top: 45px;
+}
+.top-input-text{
+    top: 0px;
+}
+.input-switch {
+    position: absolute;
+}
